@@ -36,7 +36,7 @@ if(file_exists($preview)) {
     require $preview;
 }
 
-// WooCommerce Adds Order Notes to Admin Email
+// WooCommerce Adds Order Notes to Admin Email Authored by Remi Corson
 add_action( 'woocommerce_email_order_meta', 'woo_add_order_notes_to_email' );
 
 function woo_add_order_notes_to_email() {
