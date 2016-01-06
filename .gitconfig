@@ -1,0 +1,194 @@
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[user]
+	name = douglaswebdesigns
+	email = paul@douglaswebdesigns.com
+[core]
+	autocrlf = true
+	editor = "'C:/Program Files/Sublime Text 3/SublimeText3.exe' sublime -n -w"
+[color]
+	ui = auto
+[init]
+	templatedir = C:/Program Files/Git/usr/share/git-core/templates
+[sendemail]
+	smtpencryption = tls
+	smtpserver = smtpout.secureserver.net
+	smtpuser = git@douglaswebdesigns.com
+	smtppass = 1234pld7890
+	smtpserverport = 80
+[diff]
+	tool = p4merge
+[difftool "p4merge"]
+	path = C:/Program Files/Perforce/p4merge.exe
+[difftool]
+	prompt = false
+[merge]
+	toll = p4merge
+[mergetool "p4merge"]
+	path = C:/Program Files/Perforce/p4merge.exe
+[mergetool]
+	prompt = false
+[web]
+	browser = google-chrome
+[color "branch"]
+  	current = green
+  	local = yellow bold
+  	remote = white green
+[color "diff"]
+	meta = blue bold
+	frag = magenta bold
+	old = red bold
+	new = green bold reverse
+	whitespace = red reverse
+[color "status"]
+	added = green
+	changed = white red
+	untracked = red bold
+[github]
+	user = douglaswebdesigns
+	token = 0334ec2488e0328bcfab832da9deefa9b2457c12
+[gitflow "prefix"]
+	feature = feature-
+	release = release-
+	hotfix = hotfix-
+	support = support-
+	versiontag = v
+[alias]
+	a = add --all
+	ai = add -i
+	#############
+	ap = apply
+	as = apply --stat
+	ac = apply --check
+	#############
+	ama = am --abort
+	amr = am --resolved
+	ams = am --skip
+	#############
+	b = branch
+	ba = branch -a
+	bd = branch -d
+	br = branch -r
+	#############
+	c = commit
+	ca = commit -a
+	cm = commit -m
+	cem = commit --allow-empty -m
+	cam = commit -am
+	cd = commit --amend
+	cad = commit -a --amend
+	ced = commit --allow-empty --amend
+	#############
+	d = diff
+	dc = diff --cached
+	dl = difftool
+	dlc = difftool --cached
+	dk = diff --check
+	dp = diff --patience
+	dck = diff --cached --check
+	#############
+	f = fetch
+	fo = fetch origin
+	fu = fetch upstream
+	#############
+	fp = format-patch
+	#############
+	fk = fsck
+	#############
+	g = grep -p
+	#############
+	hist = log --all --graph --decorate --oneline
+	#############
+	l = log --oneline
+	lg = log --oneline --graph --decorate
+	#############
+	ls = ls-files
+	lsf = "!git ls-files | grep -i"
+	#############
+	m = merge
+	ma = merge --abort
+	mc = merge --continue
+	ms = merge --skip
+	#############
+	o = checkout
+	ob = checkout -b
+	#############
+	pr = prune -v
+	#############
+	ps = push
+	psf = push -f
+	psu = push -u
+	pso = push origin
+	psao = push --all origin
+	psfo = push -f origin
+	psuo = push -u origin
+	psom = push origin master
+	psfom = push -f origin master
+	psuom = push -u origin master
+	#############
+	pl = pull
+	plu = pull -u
+	plo = pull origin
+	plp = pull upstream
+	plom = pull origin master
+	plpm = pull upstream master
+	#############
+	pb = pull --rebase
+	pbo = pull --rebase origin
+	pbp = pull --rebase upstream
+	pbom = pull --rebase origin master
+	pbpm = pull --rebase upstream master
+	#############
+	rb = rebase
+	rba = rebase --abort
+	rbc = rebase --continue
+	rbi = rebase --interactive
+	rbs = rebase --skip
+	#############
+	re = reset
+	rh = reset HEAD
+	reh = reset --hard
+	rem = reset --mixed
+	res = reset --soft
+	rehh = reset --hard HEAD
+	remh = reset --mixed HEAD
+	resh = reset --soft HEAD
+	#############
+	r = remote
+	ra = remote add
+	rr = remote rm
+	rv = remote -v
+	rm = remote rename
+	rp = remote prune
+	rs = remote show
+	rao = remote add origin
+	rau = remote add upstream
+	rso = remote show origin
+	rsu = remote show upstream
+	rpo = remote prune origin
+	rpu = remote prune upstream
+	#############
+	s = status
+	sb = status -s -b
+	#############
+	sa = stash apply
+	sc = stash clear
+	sd = stash drop
+	sl = stash list
+	sp = stash pop
+	ss = stash save
+	sw = stash show
+	#############
+	w = show
+	wp = show -p
+	wr = show -p --no-color
+	#############
+	svnr = svn rebase
+	svnd = svn dcommit
+	svnl = svn log --oneline --show-commit
+	#############
+
+[credentials]
+	helper = wincred
